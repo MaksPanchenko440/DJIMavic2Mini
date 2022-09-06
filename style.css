@@ -1,0 +1,227 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box; /*отступ стандарт*/
+}
+
+body {
+  font-family: "Permanent Marker", cursive;
+  color: rgb(129, 129, 129);
+}
+
+a {
+  text-decoration: none; /*для стиля из родит бокса*/
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0; /*/ отступы между заголовками*/
+}
+
+.ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  max-width: 1600px; /*/ширина бокса*/
+  padding: 0 15px; /*/отступ слева/справа*/
+  margin: 0 auto; /*/отступ по центру*/
+}
+
+.header {
+  /*изменяет весь хэдэр*/
+  background-image: url(/images/dji-mini-2-combo_11.jpg);
+  background-size: cover; /*Для размера*/
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh; /*растягивание по высоте экрана*/
+  position: relative;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/GreyLine.png);
+  /* bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(30%);
+  z-index: 2;
+}
+
+.header_top {
+  display: flex; /*отступ*/
+  align-items: center;
+  padding: 50px 0; /*отступ сверху и снизу*/
+  gap: 200px; /*расстояние между элементами*/
+  justify-content: flex-end; /*выравнивание по левому? краю*/
+  font-weight: 700; /*Толщина*/
+  font-size: 20px; /*размер*/
+  line-height: 22px; /*высота строки*/
+}
+
+.logo path {
+  transition: fill 1s ease; /*для плавной анимации эффекта сверху*/
+}
+
+.logo:hover path {
+  fill: rgb(225, 255, 214);
+  transition: fill 0.7s ease; /*эффект для лого*/
+}
+
+.header_btn {
+  text-transform: uppercase;
+  color: rgb(215, 215, 215);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 13px 50px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header_content {
+  display: flexbox; /*для надписей в хэдере(изменено)*/
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.header_content-box {
+  max-width: 700px;
+  text-align: center;
+  margin-left: 10px; /*отступ от бокса. Не от краёв*/
+  color: #fff;
+  font-weight: 500;
+}
+
+.header_title {
+  margin-bottom: 10px; /*до нижнего*/
+  line-height: 50px;
+  font-size: 50px;
+}
+
+.header_text {
+  font-size: 30px;
+  line-height: 30px; /*высота строки*/
+  margin-bottom: 20px;
+}
+
+.header_decor_text {
+  color: #fff;
+  float: right;
+  padding-right: 10px;
+  max-width: 60%;
+  font-weight: 200;
+  font-size: 30px;
+  line-height: 50px;
+  font-style: normal;
+}
+
+.info {
+  background-image: url(/images/Air2bckg.jpg);
+  background-size: cover; /*Для размера*/
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+}
+
+.info_top {
+  /* отступ текста от верхнего блока */
+  position: relative;
+  gap: 100px;
+  padding-top: 5px;
+  margin-bottom: 10%;
+}
+
+.info_specs {
+  /* абзацы */
+  gap: 10px;
+  display: flex;
+  padding-top: 0px;
+  color: black;
+}
+
+.info_top_text_one {
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.info_top_text_due {
+  border-bottom: 1px solid #fff;
+}
+
+.info_img {
+  max-width: 40%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.popup-btn {
+  padding-top: 10%;
+  padding-left: 70%;
+  padding-bottom: 200px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  background-color: transparent; /*Прозрачный цвет для кнопки!!!*/
+}
+
+.popup-btn span {
+  padding-top: 12px;
+  display: flex;
+  color: #fff;
+}
+
+.info_specs {
+  padding-top: 50px;
+  align-items: center;
+  color: #fff;
+}
+
+.info_specs_title {
+  font-size: 50px;
+  line-height: 67px;
+  width: 250px;
+}
+
+.info_specs_list {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+  max-width: 500px;
+  max-width: 700px;
+}
+
+.info_specs_item {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 30px;
+}
+
+.info_specs_caption {
+  width: 200px;
+}
+
+.buy {
+  position: relative;
+}
+
+.buy_list {
+  box-sizing: border-box;
+  text-align: justify;
+}
